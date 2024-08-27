@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Clustering and Classification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h2 {
+            color: #2E7D32;
+            text-align: center;
+        }
+        .file-upload-container {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #f0f4f0;
+            border: 2px dashed #2E7D32;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .file-upload-container:hover {
+            background-color: #e8f5e9;
+            border-color: #1B5E20;
+        }
+        .file-upload-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2E7D32;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        .file-upload-label:hover {
+            background-color: #1B5E20;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .upload-text {
+            font-size: 18px;
+            color: #2E7D32;
+            margin-bottom: 10px;
+        }
+        .predict-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .predict-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .image-item {
+            text-align: center;
+            margin: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .image-item img {
+            max-width: 300px;
+            max-height: 300px;
+            object-fit: contain;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Clustering and Classification</h1>
+    
+    <form method="post" enctype="multipart/form-data">
+        <div class="file-upload-container">
+            <p class="upload-text">Upload an image of an apple to classify:</p>
+            <label for="file-upload" class="file-upload-label">
+                Choose File
+            </label>
+            <input id="file-upload" type="file" name="image" accept="image/*">
+            <p id="file-name"></p>
+            <button type="submit" class="predict-button">Predict</button>
+        </div>
+    </form>
+    
+    {% if cluster_images %}
+    <h2>Original and Clustered Images</h2>
+    <div class="image-container">
+        {% for img in cluster_images %}
+        <div class="image-item">
+            <img src="data:image/jpeg;base64,{{ img }}" alt="Clustered Image {{ loop.index }}">
+            <p>Image {{ loop.index }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="result">
+        <h2>{{ result }}</h2>
+        <p style="color: {{ color }}">Bruised Probability: {{ bruised_prob }}</p>
+        <p style="color: {{ color }}">Non-Bruised Probability: {{ non_bruised_prob }}</p>
+    </div>
+    {% endif %}
+
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function() {
+            var fileName = this.files[0].name;
+            document.getElementById('file-name').textContent = 'Selected file: ' + fileName;
+        });
+    </script>
+</body>
+</html>
