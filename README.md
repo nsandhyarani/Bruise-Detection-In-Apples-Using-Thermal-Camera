@@ -9,7 +9,7 @@ Detecting bruises in apples is crucial for maintaining their quality.Current met
 -Artificial Neural Network (ANN): Classifies bruised and non-bruised apples.
 -K-Fold Cross Validation: Ensures model reliability and generalization.
 # Methodology
--Image Capture: Thermal images of apples are collected.
+-Image Capture: Thermal images of apples are collected.  
 -Data Augmentation: Enhances dataset with variations for better model training.
 -K-means Clustering: Segments bruised and non-bruised areas.
 -Feature Extraction: Identifies patterns in bruised regions.
