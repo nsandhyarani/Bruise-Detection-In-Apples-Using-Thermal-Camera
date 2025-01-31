@@ -31,4 +31,12 @@ Classification of Bruised and Non-Bruised Finally the trained model detects whet
 
 ![WhatsApp Image 2025-01-30 at 9 29 32 AM](https://github.com/user-attachments/assets/c51695b7-0b58-4978-95a7-c7a5877fd4c3)
 
+The confusion matrix and its associated metrics, such as accuracy, precision, recall, 
+and F1 score, are crucial for evaluating and understanding the performance of a classification model. 
+They ensure a trustworthy and accurate model by offering a comprehensive analysis of projections and 
+highlighting potential areas for improvement.
+
+# Conclusion
+This project developed an automated system for detecting apple bruises using thermal imaging and Artificial Neural Networks (ANN). The method effectively identifies bruised areas that are invisible to the naked eye, improving accuracy over traditional manual inspections. By leveraging computer vision and machine learning, the system enhances efficiency, reduces labor, and ensures better fruit quality. Future improvements could extend this approach to other fruits and integrate a web-based interface for real-time analysis.
+
 
