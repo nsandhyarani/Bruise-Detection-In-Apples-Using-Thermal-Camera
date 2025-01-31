@@ -17,3 +17,18 @@ Detecting bruises in apples is crucial for maintaining their quality.Current met
 -Classification & Validation: Predicts bruises and evaluates accuracy.
 
 ![WhatsApp Image 2025-01-31 at 11 50 59 AM](https://github.com/user-attachments/assets/b85dce18-8e8a-4390-8b58-4d334fd3250e)
+
+# Output
+Classification of Bruised and Non-Bruised Finally the trained model detects whether or not there are bruised images on thermal images. By identifying if fruit has bruises the ANN'S output allows one to differentiate between healthy and damaged fruits. By ensuring that only unbruised fruit is stored for long time by ensuring that only unbruised fruit is kept for storage in the freezer for 7 months. This information can subsequently be applied to reduce fruit waste in storage over extended periods of time.
+
+![image](https://github.com/user-attachments/assets/c4dbb126-10af-44ce-81f5-94440b848aba)
+
+# Results
+-Precision: 89.28%
+-Recall: 93.18%
+-F1 Score: 91.12%
+-Comparison: Thermal imaging outperforms standard webcam images in detecting internal bruises.
+
+![WhatsApp Image 2025-01-30 at 9 29 32 AM](https://github.com/user-attachments/assets/c51695b7-0b58-4978-95a7-c7a5877fd4c3)
+
+
