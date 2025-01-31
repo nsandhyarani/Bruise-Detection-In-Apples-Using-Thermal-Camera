@@ -15,4 +15,5 @@ Detecting bruises in apples is crucial for maintaining their quality.Current met
 -Feature Extraction: Identifies patterns in bruised regions.
 -Training ANN: The model learns from labeled data.
 -Classification & Validation: Predicts bruises and evaluates accuracy.
+
 ![WhatsApp Image 2025-01-31 at 11 50 59 AM](https://github.com/user-attachments/assets/b85dce18-8e8a-4390-8b58-4d334fd3250e)
