@@ -3,17 +3,17 @@
 This project presents a non-invasive approach for detecting bruises in apples using thermal imaging and Artificial Neural Networks (ANNs). The method enhances fruit quality assessment by automating bruise detection, reducing manual errors, and minimizing food waste.
 Detecting bruises in apples is crucial for maintaining their quality.Current methods, like visual inspection, can miss internal bruises. This study aims to explore the use of  thermal imaging for non-destructive bruise detection in apples. The goal is to develop a reliable method to identify bruises accurately,improving quality control and reducing food waste.
 # Features
--Thermal Imaging: Captures temperature variations to detect bruises.
--K-means Clustering: Segments images for bruise classification.
--Feature Extraction: Analyzes temperature distribution, texture, and color differences.
--Artificial Neural Network (ANN): Classifies bruised and non-bruised apples.
+-Thermal Imaging: Captures temperature variations to detect bruises.  
+-K-means Clustering: Segments images for bruise classification.  
+-Feature Extraction: Analyzes temperature distribution, texture, and color differences.  
+-Artificial Neural Network (ANN): Classifies bruised and non-bruised apples.  
 -K-Fold Cross Validation: Ensures model reliability and generalization.
 # Methodology
 -Image Capture: Thermal images of apples are collected.  
--Data Augmentation: Enhances dataset with variations for better model training.
--K-means Clustering: Segments bruised and non-bruised areas.
--Feature Extraction: Identifies patterns in bruised regions.
--Training ANN: The model learns from labeled data.
+-Data Augmentation: Enhances dataset with variations for better model training.  
+-K-means Clustering: Segments bruised and non-bruised areas.  
+-Feature Extraction: Identifies patterns in bruised regions.  
+-Training ANN: The model learns from labeled data.  
 -Classification & Validation: Predicts bruises and evaluates accuracy.
 
 ![WhatsApp Image 2025-01-31 at 11 50 59 AM](https://github.com/user-attachments/assets/b85dce18-8e8a-4390-8b58-4d334fd3250e)
@@ -24,9 +24,9 @@ Classification of Bruised and Non-Bruised Finally the trained model detects whet
 ![image](https://github.com/user-attachments/assets/c4dbb126-10af-44ce-81f5-94440b848aba)
 
 # Results
--Precision: 89.28%
--Recall: 93.18%
--F1 Score: 91.12%
+-Precision: 89.28%  
+-Recall: 93.18%  
+-F1 Score: 91.12%  
 -Comparison: Thermal imaging outperforms standard webcam images in detecting internal bruises.
 
 ![WhatsApp Image 2025-01-30 at 9 29 32 AM](https://github.com/user-attachments/assets/c51695b7-0b58-4978-95a7-c7a5877fd4c3)
